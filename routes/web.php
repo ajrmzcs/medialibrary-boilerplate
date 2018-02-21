@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', 'PostController@index'); // Redirect to /post for this example
+Route::get('/', 'PostController@index')->name('home'); // Redirect to /post for this example
 
 Route::resource('post','PostController');

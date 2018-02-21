@@ -45,14 +45,19 @@ class PostController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        $image = $request->file('image');
+        $post = Post::create([
+            'title' => $request->title,
+            'body' => $request->body,
+        ]);
 
-        $path = Storage::disk('public')->putFile('posts-images',$image);
+        // Save image to storage in local disk
+        $path = Storage::putFile('posts-images',$request->file('image'));
 
-        return Storage::url($path);
+        // Move image to media disk and associate to model
+        $post->addMedia(storage_path('app/').$path)
+            ->toMediaCollection();
 
-
-
+        return redirect()->route('home');
 
     }
 
@@ -64,7 +69,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('show-post',compact('post'));
     }
 
     /**

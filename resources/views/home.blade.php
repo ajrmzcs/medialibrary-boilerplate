@@ -24,14 +24,14 @@
                     </tr>
                     @foreach($posts as $post)
                         <tr>
-                            <td class="text-center">{{ $post->title }}</td>
-                            <td class="text-center">{{ $post->excerpt() }}</td>
-                            <td class="text-center">{{ $post->created_at->format('m-d-Y') }}</td>
-                            <td class="text-center"></td>
-                            <td class="text-center">
+                            <td class="text-center align-middle"><a href="{{ route('post.show',['post' => $post->id]) }}">{{ $post->title }}</a></td>
+                            <td class="text-center align-middle">{{ $post->excerpt() }}</td>
+                            <td class="text-center align-middle">{{ $post->created_at->format('m-d-Y') }}</td>
+                            <td class="text-center align-middle"><img src="{{ $post->getFirstMediaUrl('','thumb') }}" alt=""></td>
+                            <td class="text-center align-middle">
                                 <a href="user/{{ $post->id }}/edit" class="btn btn-sm btn-primary pull-right" title="Edit"><span class="fa fa-edit"></span></a>
                             </td>
-                            <td class="text-center">
+                            <td class="text-center align-middle">
                                 <form action="user/{{ $post->id }}" method="POST">
                                     {{csrf_field()}}
                                     {{ method_field('DELETE') }}
