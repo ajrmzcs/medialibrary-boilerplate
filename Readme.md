@@ -10,10 +10,12 @@ For installation requirements please refer to both [laravel](https://laravel.com
 
 ### Install steps:
 * Clone this repository
+* Create mysql database and set credentials in .env file
 * run in terminal:
     ```bash
     composer install
     npm install
     npm run dev
+    php artisan migrate
     ```
 * You should see a table with basic crud action over a Post Model, in which only the minimum required methods a few methods have been implemented.
