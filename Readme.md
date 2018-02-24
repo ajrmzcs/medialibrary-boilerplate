@@ -2,9 +2,9 @@
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
-This is a laravel 5.6/Bootstrap 4 project with a basic spatie/laravel-medialibrary impplementation, to associate images to eloquent models.
+This is a laravel 5.6/Bootstrap 4 project with a basic [spatie/laravel-medialibrary](https://github.com/spatie/laravel-medialibrary) impplementation, to associate images to eloquent models.
 
-For installation requirements please refer to both laravel and media library documentation.
+For installation requirements please refer to both [laravel](https://laravel.com/docs/5.6) and the [media library](https://docs.spatie.be/laravel-medialibrary/v6/introduction) documentation.
 
 ### Install steps:
 * Clone this repository
