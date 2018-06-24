@@ -18,4 +18,4 @@ For installation requirements please refer to both [laravel](https://laravel.com
     npm run dev
     php artisan migrate
     ```
-* You should see a table with basic crud action over a Post Model, in which only the minimum required methods a few methods have been implemented.
+* You should see a table with basic crud action over a Post Model, in which only the minimum required methods have been implemented.
